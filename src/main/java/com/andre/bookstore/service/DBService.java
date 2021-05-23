@@ -21,7 +21,7 @@ public class DBService {
 
 	public void getConn() {
 		Categoria cat2 = new Categoria(null, "Informática", " Livros de TI");
-		Categoria cat3 = new Categoria(null, "História", " Livros de TI");
+		Categoria cat3 = new Categoria(null, "História", " Livros de hitória");
 		
 		Livro l2 = new Livro(null, "Arquitetura de software", "Robert Martin", "Lorem ipsum", cat2);
 		Livro l3 = new Livro(null, "História da guerra", "Desconhecido", "Lorem ipsum", cat3);
