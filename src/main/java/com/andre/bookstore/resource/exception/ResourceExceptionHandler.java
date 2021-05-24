@@ -20,4 +20,12 @@ public class ResourceExceptionHandler {
 
 	}
 
+	@ExceptionHandler(com.andre.bookstore.service.exception.DataIntegrityViolationException.class)
+	public ResponseEntity<StandardError> dataIntegrityViolationException(
+			com.andre.bookstore.service.exception.DataIntegrityViolationException e, ServletRequest request) {
+		StandardError error = new StandardError(System.currentTimeMillis(), HttpStatus.BAD_REQUEST.value(),
+				e.getMessage());
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+
+	}
 }
